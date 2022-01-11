@@ -1,0 +1,28 @@
+class Solution {
+    private:
+    bool tolower(char ch){
+        char temp;
+    if(ch>='a'&&ch<='z'){
+        return ch;
+    }
+        else{
+            temp=ch-'A'+'a';
+            return temp;
+    }
+    }
+public:
+    char nextGreatestLetter(vector<char>& letters, char target) {
+       int n=letters.size();
+        int s=0;
+        int e=n-1;
+        while(s<n){
+      if(letters[s]>target)
+          return letters[s];
+       else if(letters[e]<=target)
+           return letters[s];
+            else
+           s++;
+        }
+        return 0;
+    }
+};

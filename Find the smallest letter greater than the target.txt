@@ -1,6 +1,6 @@
 class Solution {
     private:
-    bool tolower(char ch){
+    char tolower(char ch){
         char temp;
     if(ch>='a'&&ch<='z'){
         return ch;

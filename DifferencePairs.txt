@@ -12,3 +12,8 @@
        i++;
    }
    return false;
+
+
+
+link:----------------------
+https://practice.geeksforgeeks.org/.../find-pair-given.../1/

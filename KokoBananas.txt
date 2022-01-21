@@ -1,0 +1,26 @@
+class Solution {
+    private:
+    int valid(int m , vector<int> v){
+    int h=0;
+    for(int i:v){
+        h+=(i+m-1)/m;
+    }
+        return h;
+    }
+public:
+    int minEatingSpeed(vector<int>& piles, int h) {
+        int s=1;
+        int l=*max_element(piles.begin(),piles.end());
+        int ans=l;
+        while(s<=l){
+            int mid =s+(l-s)/2;
+        if(valid(mid,piles)<=h){
+            ans=min(ans,mid);
+            l=mid-1;
+        }
+            else
+                s=mid+1;
+        }
+        return ans;
+    }
+};

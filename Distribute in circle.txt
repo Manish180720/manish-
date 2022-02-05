@@ -1,0 +1,7 @@
+int solve(int A, int B, int C) {
+    int res=(A+C-1)%B;
+    if(res==0)
+    return B;
+    else
+    return res;
+}
